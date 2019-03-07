@@ -1,0 +1,11 @@
+<% @page_title = "Add a Link" -%>
+<%= error_messages_for 'link' %>
+<h1>Add a Link</h1>
+<% form_for :link, :url => { :action => 'add_link', :id => @link } do |f| %>
+    <div class="form">
+        <p>Link text/title: <%= f.text_field :text %></p>
+        <p>Link URL: <%= f.text_field :url %></p>
+		<p>Description of Link: <%= f.text_field :description %></p>
+  		<%= submit_tag "Add this link" %>   
+ 	</div>
+<% end %>

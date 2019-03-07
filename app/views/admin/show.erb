@@ -1,0 +1,10 @@
+
+<h1>Review Show information</h1>
+<% for column in Gig.content_columns %>
+<p>
+  <b><%= column.human_name %>:</b> <%=h @gig.send(column.name) %>
+</p>
+<% end %>
+
+<%= link_to 'Edit Show Details', :action => 'edit', :id => @gig %> |
+<%= link_to 'List all Shows', :action => 'list' %>

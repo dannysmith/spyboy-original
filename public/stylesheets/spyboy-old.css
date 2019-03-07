@@ -1,0 +1,314 @@
+* {
+	padding o;
+	margin: 0;
+}
+
+.clear_self:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/* Hides from IE-mac \*/
+* html .clear_self {height: 1%;}
+/* End hide from IE-mac */
+
+.clear {
+clear: both;
+}
+
+* html #main {
+	height: 1%;
+}
+
+/* END IE COMPATIBILITY */
+
+/* GENERAL STYLING etc.*/
+
+body {
+	font-family:  Tahoma, Arial, Verdana, sans-serif;
+	color: #655228;
+	line-height: 1.5em;
+	font-size: 85%;
+	background: #fff;
+	margin: 0;
+	padding: 0;
+
+}
+
+
+#wrapper {
+	position: relative;
+	padding: 0;
+	text-align: left;
+}
+
+#content {
+	width: 800px;
+}
+
+.flasher {
+  border: 2px solid #86b514;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  }
+
+a, a:visited {
+color: #ee9414;
+text-decoration: none;
+border-bottom: 1px dotted #ee9414;
+}
+
+a:hover {
+color: #fff;
+background: #ee9414;
+border-bottom: none;
+}
+
+input, textarea {
+	border: 1px solid #e5d2b0;
+	background: #f7f3c7;
+	font-family:  Tahoma, Arial, Verdana, sans-serif;
+	color: #655228;
+}
+
+textarea {
+    width: 35em;
+	padding: 5px;
+	margin: 3px;
+    }
+
+/* SIDEBAR */
+
+#sidebar {
+	position: absolute;
+	top: 100px;
+	width: 200px;
+	left: 0px;
+	margin-left: 40px;
+}
+
+.sidebar-block {
+	#padding-top: 20px;
+}
+
+.sidebar-block h3 {
+	color: #a87825;
+	font-size: 1.3em;
+	font-weight: normal;
+	text-transform: lowercase;
+}
+
+.sidebar-block h3 span {
+	color: #885907;
+	font-weight: bold;
+}
+
+.sidebar-block .inner {
+	padding: 5px 0 5px 0;
+	margin: 5px 0 5px 0;
+	border-top: 2px solid #e6e6e6;
+}
+
+.sidebar-block .inner p {
+    padding-bottom: 7;
+    }
+
+.sidebar-block .signup {
+	margin-bottom: 5px;
+}
+
+#navigation li {
+	font-size: 1.8em;
+	padding-bottom: 0.5em;
+}
+
+.sidebar-block .signup input[type="text"] {
+	padding: 3;
+	font-weight: bold;
+	width: 155
+}
+.sidebar-block .signup input[type="submit"] {
+	padding: 3;
+	font-weight: bold;
+	width:43
+	background: #ee9414;
+}
+
+
+/* HEADER */
+
+#header {
+	background: #f7f3c7 url(/images/header-bg.gif) top left repeat-x;
+	padding-top: 15px;
+	border-bottom: 3px solid #e5d2b0;
+}
+#header h1 {
+	background: #f7f3c7 url(/images/logo2.gif) top left no-repeat;
+	height: 50px;
+	margin: 0 0 5px -12px;
+}
+#header h1 span {
+	display:none;
+	}
+
+#header h2 {
+	margin: -22px 0 5px 175px;
+	font: 1.45em "Lucida Grande", arial, sans-serif;
+}
+
+#header p {
+    text-align: right;
+    font: 1em "Lucida Grande", arial, sans-serif;
+    padding: 0 30 5 0;
+}
+
+
+/* MAIN */
+
+#main {
+	margin-left: 280px;
+	position: relative;
+	left: 195px
+	width: 600px;
+	top: 40px;
+}
+
+#main h2 {
+  margin-top: 0.2em;
+  color: #ee9414;
+  font: normal 1.9em "Tahoma", arial, sans-serif;
+}
+
+
+
+
+/* WELCOME PAGE*/
+
+#mashup {
+	border: none;
+}
+
+#photocredits {
+	font: normal 0.8em "Tahoma", arial, sans-serif;
+	color: #999;
+	padding-bottom: 55px;
+}
+
+#photocredits span {
+	font-weight: bold;
+}
+
+#photocredits p {
+	text-decoration: underline;
+}
+
+
+
+/*GIGS LISTINGS*/
+
+#gig-list {
+	padding: 10 0 20 10;
+}
+
+.gig-info {
+	padding: 10 0 20 0;
+	border-bottom: 2px solid #999;
+    clear: both;
+
+}
+
+.gig-info h3 {
+	margin-top: 0.8em;
+  	margin-bottom: 0.3em;
+  	color: #86b514;
+	font-weight: normal;
+	font-size: 1.6em;
+}
+
+.gig-venue {
+	font: normal 1.4em "Tahoma", arial, sans-serif;
+	color: #a87825;
+	padding-bottom: 5px;
+}
+
+.gig-date {
+
+	font: bold 1.4em "Tahoma", arial, sans-serif;
+	color: #a87825;
+	padding-bottom: 5px;
+	padding-right: 0.8em;
+}
+
+.gig-time {
+	color: #a87825;
+	font-size: 1em;
+	font-weight: normal;
+}
+.gig-info img {
+	border: 1px solid #999;
+	width: 140px;
+}
+
+.img1 {
+	float: left;
+	padding-right: 10
+}
+
+.img2 {
+	float: right;
+
+}
+
+.img2 img {
+	width: 90;
+}
+
+.gig-description {
+	vertical-align: top;
+}
+
+.gig-price {
+	color: #885907;
+	font-weight: bold;
+	font-size: 0.95em;
+	padding-top: 0.8em;
+
+}
+
+.nextpage li {
+	font-size: 2.5em;
+	float: left;
+	padding:  0 15 0 15;
+	list-style: none;
+}
+
+#real_links ul {
+	list-style: none;
+	font size: 1.5em;
+	padding-left: 0;
+	font-size: 0.8em;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

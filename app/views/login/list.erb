@@ -1,0 +1,13 @@
+<% @page_title ="User List" -%>
+<h1>User List</h1>
+<p>These are all the users able to access your system. You can add more in the menu on the left.</p>
+<p>You can <%= link_to 'Add a New User', :controller => 'login', :action => 'add_user' %> if you need to.</p>
+<div id = "userlist">
+	<% for user in @all_users -%>
+		<div class="user-in-list">
+			<%= user.id %>.
+			<%= user.name%>
+			<span><%= link_to '(delete)', { :action => :delete_user, :id => user.id}, :confirm => 'Are you sure you want to delete this user?' %></span>
+		</div>
+	<% end -%>
+</div>

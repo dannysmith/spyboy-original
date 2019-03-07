@@ -1,0 +1,22 @@
+<% @page_title ="Subscribers List" -%>
+<h1>Subscribers to your Emailing List</h1>
+<p>These are all the People who have subscribed to your mailing list. There are <strong><%= @all_subscribers.length %></strong> in the list. To copy the email addresses to the clipboard ready for you to use in an email, click on the box and then press Ctrl+C, or choose copy from the edit menu.</p>
+
+<p><textarea readonly name="email_container" id="email_container" onClick="javascript:this.select();"><% for subscriber in @all_subscribers -%><%= subscriber.email %>, <% end -%></textarea></p>
+
+<h2>Current Subscribers</h2>
+<div id = "userlist">
+	<% for subscriber in @all_subscribers -%>
+		<div class="user-in-list">
+			<%= subscriber.email %>
+			<span><%= link_to '(delete)', { :action => :delete_subscriber, :id => subscriber.id }, :confirm => 'Are you sure you want to delete this person?' %></span>
+		</div>
+	<% end -%>
+	
+
+
+	<br />
+	<br />
+	<br />
+	<br />
+</div>

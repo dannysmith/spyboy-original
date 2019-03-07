@@ -1,0 +1,19 @@
+<% @page_title ="Links List" -%>
+<h1>Links Admin List</h1>
+<p>These are all the Links that will be displayed in the sidebar of your website.</p>
+
+<div id = "userlist">
+	<% for link in @all_links -%>
+		<div class="user-in-list">
+			<%= @count=@count+1 %>.
+			<%= link.text %>
+			<span><%= link_to '(delete)', { :action => :delete_link, :id => link.id }, :confirm => 'Are you sure you want to delete this link?' %></span>
+			<span><%= link_to '(edit)', :action => 'edit_link', :id => link %>
+		</div>
+
+	<% end -%>
+	<br />
+	<br />
+	<br />
+	<br />
+</div>

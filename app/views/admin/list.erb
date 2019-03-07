@@ -1,0 +1,22 @@
+<h1>Your Shows...</h1>
+
+	<p><%= link_to 'Add a new show', :action => 'new' %></p>
+
+<div id="admin_list">
+	<%
+	odd_or_even = 1
+	for gig in @gigs
+	    odd_or_even = 1 - odd_or_even
+	%>
+
+    <div class="ListLine<%= odd_or_even %>">
+        <p><%= link_to h(gig.title), :action => 'edit', :id => gig %>
+        <%= h(gig.date.strftime("%a %d %B %Y")) %> <span class="ad_small"><%= gig.venue %>, tickets: <%= h(gig.price) %></span>
+		</p>
+	    <div class="ListActions">
+	        <%= link_to 'Edit', :action => 'edit', :id => gig %>
+	        <%= link_to 'Delete', { :action => 'destroy', :id => gig }, :confirm => 'Are you sure you want to delete this show?' %>
+	    </div>
+    </div>
+<% end %>
+</div>

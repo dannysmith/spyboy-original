@@ -1,0 +1,45 @@
+<h2>Future Shows</h2>
+    <div id="gig-list">
+    
+        <% for future_gig in @future_gigs %>
+          <div class="gig-info">
+        
+
+		        <h3><%=h future_gig.title %></h3>
+
+		        <span class="gig-date">
+		           <%=h future_gig.date.strftime("%A %d %B %Y") %>
+		        </span>
+		        <span class="gig-time">
+		            <%=h future_gig.time %>
+		        </span>
+		        
+		        <div class="gig-venue">
+		           <%= future_gig.venue %>
+		        </div>
+		        
+		        <div class="gig-description-wrapper">
+			        <span class="img1">
+				        <a href="<%= future_gig.image_url %>">
+				          <img src="<%= future_gig.image_url %>" />
+				        </a>
+			        </span>
+			        
+			        <span class="gig-description">
+                        <%= future_gig.description %>
+                    </span>
+                    
+	                <span class="img2">
+		                <a href="<%= future_gig.image2_url %>">
+				          <img src="<%= future_gig.image2_url %>" />
+				        </a>
+			        </span>
+		        </div>
+		        
+		        <div class="gig-price">
+		           <p>Seats: <%=h future_gig.price %></p>
+		        </div>
+
+		  </div>
+        <% end %>
+    </div>

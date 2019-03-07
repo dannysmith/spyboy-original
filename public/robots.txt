@@ -1,0 +1,6 @@
+# Robots file
+#Dissalaws robots from inexing the password-protected areas. Stops crap search results.
+
+User-agent: *
+Disallow: /admin
+Disallow: /login

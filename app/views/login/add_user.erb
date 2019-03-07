@@ -1,0 +1,13 @@
+<% @page_title = "Add a User" -%>
+<%= error_messages_for 'user' %>
+<h1>Add a user</h1>
+<% form_for :user, :url => { :action => 'add_user', :id => @user } do |f| %>
+    <div class="form">
+        <p>User Name: <%= f.text_field :name %></p>
+        <p>Password: <%= f.password_field :password %></p>
+        <%= submit_tag "Add User" %>   
+ 	</div>
+<% end %>
+		
+
+

@@ -1,0 +1,153 @@
+
+/* body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+}
+*/
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+h1 {
+    padding: 0 10 10 0;
+    color: #ee9414;
+    font: normal 1.9em "Tahoma", arial, sans-serif;
+    }
+    
+.user-in-list {
+    font-weight: bold;
+    padding: 5 0 5 0;
+    }
+    
+.user-in-list span {
+    font-weight: normal;
+    font-size: 0.8em;
+    }
+ 
+.form p {
+    margin: 8 8 8 8;
+    }
+
+label {
+    font-weight: bold;
+    }
+    
+.fieldWithErrors {
+  width: 10em;
+  padding: 3px;
+  background-color: #86b514;
+  display: table;
+}
+
+#ErrorExplanation {
+  width: 400px;
+  border: 2px solid #86b514;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#ErrorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #fff;
+  color: #000;
+}
+
+#ErrorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#ErrorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+  margin: 0 0 0 20;
+}
+
+div.uploadStatus {
+  margin: 5px;
+}
+
+div.progressBar {
+  margin: 5px;
+}
+
+div.progressBar div.border {
+  background-color: #fff;
+  border: 1px solid grey;
+  width: 100%;
+}
+
+div.progressBar div.background {
+  background-color: #333;
+  height: 18px;
+  width: 0%;
+}
+
+.ListTitle {
+    color: #244;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.ListActions {
+    font-size: 1em;;
+    text-align: right;
+}
+
+.ListLine0 {
+    background: #f7f3c7;
+}
+
+.ListLine1 {
+    background: #fff;
+}
+
+.ListLine1, .ListLine0 img {
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    clear: both;
+}
+    
+#gig-form p {
+    padding: 5 0 5 0;
+    }
+
+#admin_list {
+    padding-bottom: 45px;
+    }
+    
+#admin_list img {
+    float: left;
+    padding: 10;
+    }
+ 
+.ad_small {
+    font: normal 0.8em "Tahoma", arial, sans-serif;
+    }
+    
+.inner li {
+    font: normal 1.2em "Tahoma", arial, sans-serif;
+    padding: 4;
+    }
+    
+.flasher {
+  border: 2px solid #86b514;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  }
+  
+  .ad_information {
+    text-align: right;
+    }

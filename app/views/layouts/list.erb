@@ -1,0 +1,81 @@
+<html>
+<head>
+    <title>SpyBoy - <%= params[:action].capitalize %></title>
+    <meta name="author" content="SpyBoy" />
+    <meta name="description" content="Description of Spyboy" />
+    <meta name="keywords" content="folk, music, gig, gigs, blues, promotion, spyboy, perry, eastbourne, accoustic, sussex, england" />
+    <script type="text/javascript"></script>
+    <%= stylesheet_link_tag "spyboy-old", :media => "all" %>
+</head>
+<body>
+
+    <div id="wrapper" class="clear_self">
+    
+        <div id="header" class="clear_self">
+            <h1><span><%= @page_title || "SpyBoy.co.uk" %></span></h1>
+            <h2>music to your ears...</h2>
+            <p>email: <a href="mailto:info@spyboy.co.uk">info@spyboy.co.uk</a></p>
+        </div>
+        
+	    <div id="content">
+	    
+	            <div id="main">
+	                <%= @content_for_layout %>
+	           </div>
+	           
+	            <div id="sidebar">
+	            
+	               <div id="navigation" class="sidebar-block">
+	                   <h3><span>site</span>navigation</h3>
+	                   <div class="inner">
+	                       <li><%= link_to 'Home', :action => 'welcome' %></li>
+	                       <li><%= link_to 'Future Shows', :action => 'index' %></a></li>
+                       </div>
+	               </div>
+	               
+
+	               <div id="links" class="sidebar-block">
+	                   <h3><span>spy</span>boy</h3>
+	                   <div class="inner">
+		                   <p>presents <strong>folk</strong>, <strong>roots</strong>, <strong>blues</strong> and <strong>acoustic</strong> music at the Hailsham Pavilion and other venues in and around East Sussex.</p>
+							<% if @isWelcomePage %>
+		                   		<p>Many leading artistes, some of whom are shown on the right, have regularly given memorable performances.</p>
+		                   		<p>However, if you've only just found us, <strong>don't despair</strong>, as undoubtedly there are <%= link_to 'many more to come.', :action => 'index' %></strong></p>
+							<% end %>
+							
+	                   <div class="inner">
+	               </div>
+	               
+	               <div id="contact" class="sidebar-block">
+	                   <h3><span>sign</span>up</h3>
+	                   <div class="signup">
+			               <%= "<p class='flasher'> #{flash[:notice]}</p>" if flash[:notice] %>
+	                       <p>enter your email address below and click on the button to receive up to date information from us.<p>
+							<% form_for :subscriber, :url => { :action => 'add_subscriber', :controller => 'subscribers', :id => @subscriber } do |f| %>
+	                       <div class="form">
+	                            <%= f.text_field :email %>
+	                            <%= submit_tag "Button" %>   
+                            </div>
+                            <% end %>
+                       </div>
+	               </div>
+	               <% unless @isWelcomePage %>
+					<div id="real_links" class="sidebar-block">
+						 <h3><span>spyboy</span>links</h3>
+		                   <div class="inner">
+							<ul>
+			                   <%	@links = Link.find(:all)
+									for link in @links %>
+										<li><a href="<%= link.url %>"><%= link.text %></a> <%= link.description %></li>
+							   <%	end %>
+							</ul>
+						   </div>
+					</div>
+					<% end %>
+	            </div>
+	   
+	    </div>
+	</div>
+</body>
+</html>
+            
